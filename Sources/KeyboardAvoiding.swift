@@ -82,7 +82,7 @@ import UIKit
         let animationOptions = animationCurve << 16
         // if split keyboard is being dragged, then skip notification
         
-        if keyboardFrame.size.height == 0 && (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad) {
+        if keyboardFrame.size.height == 0 && (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             if isPortrait && keyboardFrameBegin.origin.y + keyboardFrameBegin.size.height == screenSize.height {
                 return
             }
